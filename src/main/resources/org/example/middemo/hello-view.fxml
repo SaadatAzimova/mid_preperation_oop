@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.middemo.HelloController">
+   <children>
+      <TextField fx:id="inputKWH" layoutX="38.0" layoutY="245.0" />
+      <Label layoutX="33.0" layoutY="213.0" text="total kilowatt-hours (kWh) consumed" />
+      <RadioButton fx:id="pType" layoutX="33.0" layoutY="82.0" mnemonicParsing="false" text="Population">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="hType" layoutX="33.0" layoutY="124.0" mnemonicParsing="false" text="Highlands" toggleGroup="$type" />
+      <RadioButton fx:id="cType" layoutX="29.0" layoutY="164.0" mnemonicParsing="false" text="Commercial" toggleGroup="$type" />
+      <TextField fx:id="totalCost" layoutX="376.0" layoutY="91.0" />
+      <Button fx:id="calculateButton" layoutX="40.0" layoutY="298.0" mnemonicParsing="false" onAction="#onRBCalculateclick" text="Calculate" />
+      <Label layoutX="376.0" layoutY="50.0" text="total cost" />
+   </children>
+</AnchorPane>
